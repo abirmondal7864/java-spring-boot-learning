@@ -15,7 +15,7 @@ public class methods {
     Computer comp=new Computer();
     comp.playmusic();
 
-     int money=15;
+     int money=20;
      String result=comp.getMeAPen(money);
      System.out.println(result);
     }

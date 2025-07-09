@@ -1,3 +1,5 @@
+package methods;
+
 class Computer{
     public void playmusic(){
         System.out.println("Music playing...");

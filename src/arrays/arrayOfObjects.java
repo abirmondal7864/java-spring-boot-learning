@@ -29,8 +29,14 @@ public class arrayOfObjects {
         students[1]=s2;
         students[2]=s3;
 
-        for (int i = 0; i < students.length; i++) {
-            System.out.println("Name: "+ students[i].name+", Roll: "+ students[i].roll+", Age: "+ students[i].age);
+//        for (int i = 0; i < students.length; i++) {
+//            System.out.println("Name: "+ students[i].name+", Roll: "+ students[i].roll+", Age: "+ students[i].age);
+//        }
+
+        //use enhanced for loop
+        for(Student stud:students){
+            System.out.println("Name: "+ stud.name+", Roll: "+ stud.roll+", Age: "+ stud.age);
         }
+
     }
 }

@@ -1,4 +1,4 @@
-package oops;
+package statickeyword;
 
 class Mobile {
 
@@ -37,7 +37,7 @@ public class staticVariable {
 
         // Explicitly loads the 'Mobile' class into memory.
         // This triggers the execution of the static block.
-        Class.forName("oops.Mobile");
+        Class.forName("statickeyword.Mobile");
 
 
 //        Mobile obj1 = new Mobile();

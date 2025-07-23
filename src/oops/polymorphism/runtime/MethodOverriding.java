@@ -1,4 +1,4 @@
-package oops.polymorphism;
+package oops.polymorphism.runtime;
 
 // Base class (Superclass)
 class Animal {

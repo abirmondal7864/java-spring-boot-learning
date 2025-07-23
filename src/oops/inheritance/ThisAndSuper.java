@@ -3,19 +3,19 @@ package oops.inheritance;
 // Class A extends Object (implicitly, but shown explicitly here)
 class A extends Object {
     public A() {
-        super();// Calls the constructor of Object class (implicit, can be omitted)
+       // super();// Calls the constructor of Object class (implicit, can be omitted)
         System.out.println("in A");
     }
 
     public A(int n) {
-        super();
+       // super();
         System.out.println("in A int");
     }
 }
 
 class B extends A {
     public B() {
-        super();
+       // super();
         System.out.println("in B");
     }
 

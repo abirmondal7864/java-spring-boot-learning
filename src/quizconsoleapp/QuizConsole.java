@@ -5,5 +5,6 @@ public class QuizConsole {
 
     QuestionService service=new QuestionService();
     service.playQuiz();
+    service.printScore();
     }
 }

@@ -1,5 +1,5 @@
 // File: MoreOnInterfaces.java
-package oops.Interface;
+package oops.interfaces;
 
 // Relationships:
 // class - class         → extends

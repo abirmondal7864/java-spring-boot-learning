@@ -1,5 +1,5 @@
 // File: NeedOfInterface.java
-package oops.Interface;
+package oops.interfaces;
 
 /*
   Interface: Computer

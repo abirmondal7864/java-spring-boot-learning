@@ -1,4 +1,4 @@
-package oops.Interface;
+package oops.interfaces;
 
 /*
   Interface A demonstrates a basic Java interface with two abstract methods

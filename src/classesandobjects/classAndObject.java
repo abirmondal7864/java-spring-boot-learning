@@ -1,4 +1,4 @@
-package classesAndObjects;
+package classesandobjects;
 
 class Calculator {
     //int a;

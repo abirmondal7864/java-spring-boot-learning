@@ -1,4 +1,4 @@
-package classesAndObjects;
+package classesandobjects;
 class A{
     public A() { //constructor
         System.out.println("object created");

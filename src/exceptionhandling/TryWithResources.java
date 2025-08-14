@@ -61,8 +61,8 @@ public class TryWithResources {
          * at the end of the try block, even if an exception occurs.
          */
         try (BufferedReader br = new BufferedReader(new InputStreamReader(System.in))) {
-            num = Integer.parseInt(br.readLine());
-            System.out.println("The number is: " + num);
+            int num2 = Integer.parseInt(br.readLine());
+            System.out.println("The number is: " + num2);
         }
     }
 }

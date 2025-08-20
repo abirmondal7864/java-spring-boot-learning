@@ -2,39 +2,55 @@ package streamapi;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Stream;
 
 /**
- * The {@code WhyStreamAPI} class demonstrates the use of Java Stream API
- * and functional-style operations on collections.
+ * Demonstrates why and how to use the Java Stream API.
  * <p>
- * In this example, a list of integers is created and printed using the
- * {@code forEach} method with a lambda expression.
- * </p>
- *
- * <p><b>Key concepts demonstrated:</b></p>
+ * This example performs the following operations on a list of integers:
  * <ul>
- *   <li>Creating a list using {@link java.util.Arrays#asList(Object...)}</li>
- *   <li>Iterating elements using {@link java.util.List#forEach(java.util.function.Consumer)}</li>
- *   <li>Using lambda expressions in Java</li>
+ *   <li>Filters even numbers.</li>
+ *   <li>Doubles each even number.</li>
+ *   <li>Reduces (sums) them into a single result.</li>
  * </ul>
  *
+ * <p>For the list {@code [4, 5, 7, 3, 2, 6]}:</p>
+ * <pre>
+ * Even numbers = [4, 2, 6]
+ * Doubled = [8, 4, 12]
+ * Sum = 24
+ * </pre>
  */
 public class WhyStreamAPI {
 
     /**
      * The entry point of the program.
      * <p>
-     * It creates a list of integers and prints each element to the console
-     * using the {@code forEach} method.
+     * Creates a list of integers, processes it using the Stream API,
+     * and prints the result.
      * </p>
      *
-     * @param args command-line arguments (not used in this program)
+     * @param args command-line arguments (not used in this example)
      */
     public static void main(String[] args) {
         // Create a list of integers
         List<Integer> nums = Arrays.asList(4, 5, 7, 3, 2, 6);
 
-        // Print each number in the list using forEach and lambda expression
-        nums.forEach(n -> System.out.println(n));
+        /*
+         * Example using Stream API step by step:
+         * Stream<Integer> s1 = nums.stream();
+         * Stream<Integer> s2 = s1.filter(n -> n % 2 == 0); // evens
+         * Stream<Integer> s3 = s2.map(n -> n * 2);         // doubled
+         * int result = s3.reduce(0, (c, e) -> c + e);      // sum
+         */
+
+        // Stream pipeline in a single chain
+        int result = nums.stream()
+                .filter(n -> n % 2 == 0)      // keep only even numbers
+                .map(n -> n * 2)              // double each even number
+                .reduce(0, (c, e) -> c + e);  // sum them up
+
+        // Print the result
+        System.out.println(result);
     }
 }
